@@ -1,0 +1,109 @@
+<html>
+<head>
+    <title>Thomas Annam Project One</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+<div class="row">
+    <header class="mb-5">
+        <!-- As a link -->
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="static/images/NJIT.png" alt="" width="100" height="50"
+                         class="d-inline-block align-text-top">
+                    IS601 Project One
+                </a>
+                <ul class="nav justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+</div>
+<div class="container">
+    <figure class="text-center">
+        <h1 class="display-1">About</h1>
+    </figure>
+</div>
+<div class="container" id="docker">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <img src="static/images/Docker.png" class="card-img-top" alt="Docker Logo">
+            </div>
+        </div>
+        <div class="col">
+            <h1 class="display-5">Docker</h1>
+            <p>
+                <strong>Docker</strong> is a containerization technology tool for creating and managing containers.
+                The core building blocks for Docker include containers and images. Images are the blueprints for
+                building
+                a container which are commonly defined via a <em>Dockerfile</em> or a <em>docker-compose.yml</em>.
+                Within a
+                Dockerfile, developers providers instructions to build a container, this is done via commands such as
+                <strong>FROM</strong>, <strong>RUN</strong>, <strong>CMD</strong>, <strong>ENTRYPOINT</strong>, etc.
+                Each Dockerfile must be built from a base image, which must be the first instruction within a Dockerfile
+                (i.e FROM).
+                Even though you can pull base images from a custom registry such as ECR, most base images come from
+                DockerHub,
+                which is essentially the app store/repository for all base images). Some of the Docker commands I know
+                include:
+            <ul>
+                <li>docker build -t .</li>
+                <li>docker kill "container id"</li>
+                <li>docker system prune</li>
+                <li>docker run image id</li>
+                <li>docker compose up</li>
+                <li>docker compose down</li>
+            </ul>
+            </p>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="static/images/DockerHub.png" class="card-img-top" alt="...">
+            </div>
+        </div>
+    </div>
+</div>
+<hr/>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <img src="static/images/Github.jpeg" class="card-img-top" alt="...">
+            </div>
+        </div>
+        <div class="col">
+            <h1 class="display-5">Github</h1>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="static/images/Github.jpeg" class="card-img-top" alt="...">
+            </div>
+        </div>
+    </div>
+</div>
+<hr/>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <h1 class="display-5">Python/Flask</h1>
+        </div>
+        <div class="col">
+            <div class="card">
+                <img src="static/images/Github.jpeg" class="card-img-top" alt="...">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<html>
+<head>
+    <title>Thomas Annam Project One</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+<div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="static/images/NJIT.png" width="100" height="50" class="rounded" alt="...">
+                    IS601 Project One
+                </a>
+                <div class="navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">CI/CD</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div>
+<div class="container p-3">
+    <div class="row">
+        <div class="col-8">
+            <p class="h3">CI/CD</p>
+            <hr class="bg-danger border-2 border-top border-danger">
+            <p class="fw-normal"><strong>CI/CD</strong> also known as Continuous Integration/Continuous Delivery
+                is the cornerstone of the DevOps approach. Continuous Integration involves the lifecycle from when a
+                developer develops/pushes their code to their repository
+                and all the unit tests/integration pass. Continuous Delivery involves taking all of your code after it
+                has been developed and passes integration testing,
+                and deployed into a different environment such as Dev, QA, or Production.
+            </p>
+            <p class="fw-normal"><strong>Continuous Integration</strong> as defined by Martin Fowler is
+            <blockquote style="background: #eee">
+                <p class="fw-normal p-3">
+                    ...a software development practice where members of a team integrate their work frequently, usually
+                    each person integrates at least daily - leading to multiple integrations per day
+                    (https://www.martinfowler.com/articles/continuousIntegration.html)
+                </p>
+            </blockquote>
+            With this constant integration on a day-to-day basis, some benefits that this produces as described by
+            Martin Fowler can be summarized as the following :
+            <ul class="px-5">
+                <li>Better collaboration between software development teams</li>
+                <li>Smaller code changes</li>
+                <li>Frequent deployments</li>
+                <li>Less bugs (code defects) and easier to debug</li>
+            </ul>
+            </p>
+        </div>
+        <div class="col">
+            <img src="static/images/DevOps.png" width="400" height="400" class="rounded float-end" alt="...">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <p class="h3">Github Actions</p>
+            <hr class="bg-danger border-2 border-top border-danger">
+            <p class="fw-normal"><strong>Github Actions</strong> is a service that GitHub provides in order for teams or
+                developers
+                to have the ability for CI/CD deployments via a pipeline. GitHub Actions are similar to other CI/CD
+                pipelines such as Jenkins, Travis CI, or Concourse.
+                GitHub Actions are compromised of workflows which are completely automated and configurable that you can
+                add to your GitHub Repository.
+                GitHub Actions is purely event based driven, which means your workflow responds to a specific event
+                after it has been triggered. Some events that your workflow can correspond to include the following:
+            <ul class="px-5">
+                <li>Issues</li>
+                <li>PR creation</li>
+                <li>Scheduled Events (i.e. cron job)</li>
+            </ul>
+            All workflows must be defined in YAML syntax, and defined under <em>.github/workflows</em>
+            </p>
+        </div>
+        <div class="col">
+            <img src="static/images/GithubActions.png" width="400" height="400" class="rounded float-end" alt="...">
+            <p class="h3">Documentation</p>
+            <div class="card">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <a href="https://docs.github.com/en/actions" target="_blank"
+                           class="link-primary">GitHub Actions</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://github.com/ThomasAnnamNJIT/is601-project-one/blob/main/.github/workflows/dev.yml"
+                           target="_blank" class="link-primary">Development Workflow</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://github.com/ThomasAnnamNJIT/is601-project-one/blob/main/.github/workflows/prod.yml"
+                           target="_blank"
+                           class="link-primary">Production Workflow</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <p class="h3">Setup A GitHub Workflow</p>
+            <hr class="bg-danger border-2 border-top border-danger">
+            <p class="h3">
+                Development Workflow
+            <div class="container p-3">
+                <img src="static/images/DevWorkflow.png" class="rounded" alt="...">
+                <p class="text-justify">
+                    A workflow must respond to an event, as discussed above, this event can be anything that ranges from
+                    issues, PRs, or scheduled events.
+                    This is defined in the <em>on</em> section of the YAML file of the workflow. The <em>on</em> section
+                    as shown above says to trigger this workflow
+                    whenever a PR request is raised from any feature that wants to be <strong>merged</strong> into main.
+                    <br/>
+                    Github Actions are commands that are developed by you or the community to perform a task. Each
+                    action is performed within a step, which are individual tasks of a workflow.
+                    Each of these steps performed make up a job. In the diagram shown above, we are using an action that
+                    will allow us to deploy our application onto Heroku, where specify the configurations within
+                    our <strong>heroku.yml</strong> file with the build context being our <strong>Dockerfile</strong>
+                </p>
+            </div>
+            <p class="h3">
+                Production Workflow
+            <div class="container p-3">
+                <img src="static/images/ProductionWorkflow.png" class="rounded" alt="...">
+                <p class="text-justify">
+                    Now that we are familiar to how to set up a GitHub workflow and as well as understand some terms associated with them such as
+                    actions, jobs, tasks, and steps, we will now discuss the production workflow. With the production workflow, we want to trigger whenever commits have been pushed into main or
+                    whenever tags have been pushed into main. We then perform a series of steps to first run all the unit tests within the project using pytest, and then deploying our docker image into DockerHub, as shown above
+                    in our <strong>runtest</strong> and <strong>build-container</strong> jobs. Lastly, same as with the development workflow, we will also be deploying this application
+                    into Heroku.
+                </p>
+            </div>
+            </p>
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</html>

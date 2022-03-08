@@ -7,6 +7,7 @@ def test_request_index(client):
     assert b'<a class="nav-link" href="/docker">Docker</a>' in response.data
     assert b'<a class="nav-link" href="/github">GitHub</a>' in response.data
     assert b'<a class="nav-link" href="/python">Python/Flask</a>' in response.data
+    assert b'<a class="nav-link" href="/ci-cd">CI/CD</a>' in response.data
 
 
 def test_request_docker_page(client):
@@ -27,3 +28,15 @@ def test_request_python_page(client):
     """This makes the python page request"""
     response = client.get("/python")
     assert b'<a class="nav-link active" href="#">Python/Flask</a>' in response.data
+
+
+def test_request_ci_cd_page(client):
+    """This makes the ci/cd page request"""
+    response = client.get("/ci-cd")
+    assert b'<a class="nav-link active" href="#">CI/CD</a>' in response.data
+
+
+def test_page_not_found_request(client):
+    """This makes a page not found request"""
+    response = client.get("/invalid-page")
+    assert response.status_code == 404

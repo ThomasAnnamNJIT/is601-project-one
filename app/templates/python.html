@@ -1,0 +1,193 @@
+<html>
+<head>
+    <title>Thomas Annam Project One</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+<div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="static/images/NJIT.png" width="100" height="50" class="rounded" alt="...">
+                    IS601 Project One
+                </a>
+                <div class="navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Python/Flask</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div>
+<div class="container p-3">
+    <div class="row">
+        <div class="col-8">
+            <p class="h3">Python Flask</p>
+            <hr class="bg-danger border-2 border-top border-danger">
+            <p class="fw-normal"><strong>Flask</strong> is a popular Python MVC framework that allows developers to web
+                applications.
+                Flask is considered a light-weight framework given how flexible it is in terms of what libraries you're
+                able to choose from or not.
+                To develop a web app for Flask, developers can use both blueprints and templates. Templates are
+                essentially all of your HTML files, which are based of the
+                Jinja2 templating engine. Blueprints are where you define all your routes and standard REST APIs (i.e.
+                GET, POST, DELETE, PUT) operation,
+                this is where you will perform a business logic, this can vary in terms of simply outputting a string,
+                an HTML page, or forwarding into your service layer.
+            </p>
+        </div>
+        <div class="col">
+            <img src="static/images/PythonFlask.jpg" width="300" height="300" class="rounded float-end" alt="...">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <p class="h3">PyTest</p>
+            <hr class="bg-danger border-2 border-top border-danger">
+            <p class="fw-normal"><strong>PyTest</strong> is a testing framework in Python that allows you to write unit
+                tests.
+                To get started with pytest, you must have a <em>pytest.ini</em> file, which allows you to give the path
+                to where your tests are located via
+                <em>testpaths</em>.
+            </p>
+            <p class="fw-normal">
+                Here's an example of a unit test using PyTest:
+            <figure>
+                <blockquote style="background: #eee;">
+                    <p class="fw-normal p-3">
+                        def test_request_index(client): <br/>
+                        """This makes the index page request""" <br/>
+                        response = client.get("/") <br/>
+                        assert response.status_code == 200
+                    </p>
+                </blockquote>
+            </figure>
+            The above test makes a GET request to the "/" endpoint
+            The above test first a GET request to the index page (i.e. /) of the application. It will then check to see
+            if it was successful in doing so with a response
+            status code of 200, which it means it was OK. Lastly, it will check it contains all the links within the
+            main navbar.
+            </p>
+            </p>
+        </div>
+        <div class="col">
+            <p class="h3">Documentation</p>
+            <div class="card">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">
+                        <a href="https://flask.palletsprojects.com/en/2.0.x/" target="_blank"
+                           class="link-primary">Flask</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://docs.pytest.org/en/6.2.x/contents.html/" target="_blank" class="link-primary">PyTest</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://flask.palletsprojects.com/en/2.0.x/blueprints/"
+                           target="_blank"
+                           class="link-primary">BluePrint</a>
+                    </li>
+                    <li class="list-group-item">
+                        <a href="https://flask.palletsprojects.com/en/2.0.x/blueprints/"
+                           target="_blank"
+                           class="link-primary">Project</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <p class="h3">Project Layout</p>
+            <hr class="bg-danger border-2 border-top border-danger">
+            <img src="static/images/ProjectStructure.png" class="rounded" alt="...">
+            <dl>
+                <dt class="col-sm-3">.github/workflows</dt>
+                <dd class="col-sm-9">This is where you define your GitHub workflows for your development/prod
+                    environment using GitHub Actions.
+                </dd>
+                <dt class="col-sm-3">app/templates</dt>
+                <dd class="col-sm-9">
+                    This is where of all your HTML files will be placed, and that will be rendered when you add your
+                    <em>template_folder</em> to your BluePrint configuration.
+                </dd>
+                <dt class="col-sm-3">app/static</dt>
+                <dd class="col-sm-9">
+                    This is where of all your static content will go such as css, js, and images.
+                </dd>
+                <dt class="col-sm-3">app/__init__.py</dt>
+                <dd class="col-sm-9">Initializes that this directory is a python package, and this file initializes a
+                    flask application and registers of all your blueprints (i.e. API).
+                </dd>
+                <dt class="col-sm-3 text-truncate">app/run.py</dt>
+                <dd class="col-sm-9">
+                    Runs the application
+                </dd>
+                <dt class="col-sm-3">app/content/__init__.py</dt>
+                <dd class="col-sm-9">
+                    This is a python package which currently holds the BluePrint configuration for content pages
+                </dd>
+                <dt class="col-sm-3">tests</dt>
+                <dd class="col-sm-9">
+                    This is a python package where all of your unit tests will be placed under
+                </dd>
+                <dt class="col-sm-3">tests/content_pages_test.py</dt>
+                <dd class="col-sm-9">
+                    This is a unit test which tests all the routes that are defined in within the content pages
+                    (BluePrint)
+                </dd>
+                <dt class="col-sm-3">tests/conftest.py</dt>
+                <dd class="col-sm-9">
+                    This setups any pytext fixtures such as a client for http applications
+                </dd>
+                <dt class="col-sm-3">.gitignore</dt>
+                <dd class="col-sm-9">
+                    This is a special file for a GitHub repository which will essentially ignore any file that is listed
+                    under this and will never be part of the commit.
+                </dd>
+                <dt class="col-sm-3">docker-compose.yml</dt>
+                <dd class="col-sm-9">
+                    This will bring up all the services associated with your project. In this situation, it will build
+                    and run the image that is defined from your Dockerfile and also define a port
+                    mapping from port 80 on the host to port 5000 within the container. In addition, this will start the
+                    application by running "flask run"
+                </dd>
+                <dt class="col-sm-3">Dockerfile</dt>
+                <dd class="col-sm-9">
+                    This serves as a blueprint to build a docker image for your flask application.
+                </dd>
+                <dt class="col-sm-3">heroku.yml</dt>
+                <dd class="col-sm-9">
+                    Configuration file that will allow us to deploy our container to Heroku
+                </dd>
+                <dt class="col-sm-3">pytest.ini</dt>
+                <dd class="col-sm-9">
+                    Configuration file that tells pytest at which directory our python tests will be located
+                </dd>
+                <dt class="col-sm-3">README.md</dt>
+                <dd class="col-sm-9">
+                    This provides a high-level overview of the project with all of its components associated with it
+                </dd>
+                <dt class="col-sm-3">requirements.txt</dt>
+                <dd class="col-sm-9">
+                    This file is where you define all your python packages that you want as dependencies
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</html>

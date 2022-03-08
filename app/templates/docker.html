@@ -16,20 +16,11 @@
                 <div class="navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                            <a class="nav-link" aria-current="page" href="/">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('content.show', page="docker") }}">Docker</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('content.show', page="github") }}">GitHub</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('content.show', page="python") }}">Python/Flask</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('content.show', page="ci_cd") }}">CI/CD</a>
+                            <a class="nav-link active" href="#">Docker</a>
                         </li>
                     </ul>
                 </div>
@@ -39,11 +30,9 @@
 </div>
 <div class="container p-3">
     <div class="row">
-        <div class="col">
+        <div class="col-8">
             <p class="h3">Docker</p>
-        </div>
-        <hr class="bg-danger border-2 border-top border-danger">
-        <div class="col">
+            <hr class="bg-danger border-2 border-top border-danger">
             <p class="fw-normal"><strong>Docker</strong> is a containerization technology/platform for creating and
                 managing containers. The core building blocks for Docker include containers and images. Docker provides
                 an entire ecosystem for building images
@@ -57,15 +46,13 @@
             </p>
         </div>
         <div class="col">
-            <img src="static/images/Docker.png" width="250" height="100" class="rounded float-end" alt="...">
+            <img src="static/images/Docker.png" width="300" height="300" class="rounded float-end" alt="...">
         </div>
     </div>
     <div class="row">
-        <div class="col">
+        <div class="col-8">
             <p class="h3">Containers and Images</p>
-        </div>
-        <hr class="bg-danger border-2 border-top border-danger">
-        <div class="col">
+            <hr class="bg-danger border-2 border-top border-danger">
             <p class="fw-normal">
                 <strong>Images</strong> are the blueprints for building a container which are commonly defined via a
                 <em>Dockerfile</em>
@@ -83,38 +70,98 @@
             This can include installing dependencies from a <em>package.json</em> via the RUN command.
             <br/>
             <br/>
-            <strong>Containers</strong> are the runtime version of the image, or the actual running unit of code that we built from the image with the Dockerfile.
-            A container allows us to output the same application and same behavior, regardless of where it is executed, in other words, we're essentially "packaging" our entire machine.
+            <strong>Containers</strong> are the runtime version of the image, or the actual running unit of code that we
+            built from the image with the Dockerfile.
+            A container allows us to output the same application and same behavior, regardless of where it is executed,
+            in other words, we're essentially "packaging" our entire machine.
             This allows for distribution of an application to be efficient.
             <br/>
             <br/>
             Even though you can pull base images from a custom registry such as ECR, most base images
             come from DockerHub, which is essentially the app store/repository for all base images).
+            Click <a href="https://hub.docker.com/repository/docker/thomasannam/is601-project-on" class="link-primary">here</a>
+            to view this project's Docker image on DockerHub
             </p>
+        </div>
+        <div class="col">
+            <img src="static/images/DockerImageContainer.png" width="300" height="300" class="rounded float-end p-3"
+                 alt="...">
+            <img src="static/images/DockerHub.png" width="300" height="300" class="rounded float-end mx-auto" alt="...">
         </div>
     </div>
     <div class="row">
         <div class="col">
             <p class="h3">Docker Commands</p>
-        </div>
-        <div>
             <hr class="bg-danger border-2 border-top border-danger" style="height:2px; width:50%; border-width:0">
+            <dl>
+                <dt class="col-sm-3">docker build -t [image_name] [path]</dt>
+                <dd class="col-sm-9 p-2">This allows you to build an image from the location of your Dockerfile and
+                    allows
+                    you
+                    to tag it with a name.
+                </dd>
+                <dt class="col-sm-3 text-truncate">docker kill [container_id]</dt>
+                <dd class="col-sm-9 p-2">This allows you to destroy/remove a container without having to stop it
+                    beforehand
+                </dd>
+                <dt class="col-sm-3">docker system prune</dt>
+                <dd class="col-sm-9 p-2">This command will destroy any containers that are stopped containers or remove
+                    any
+                    dangling images,
+                    which include those that are untagged.
+                </dd>
+                <dt class="col-sm-3">docker run [image_id]</dt>
+                <dd class="col-sm-9 p-2">This command allows you to run a container after you have build an image from
+                    the
+                    docker build command;
+                    however, if you simply run this command without having built an image, it will build an image first,
+                    and
+                    then run the container for you automatically!
+                </dd>
+                <dt class="col-sm-3">docker ps</dt>
+                <dd class="col-sm-9 p-2">
+                    This will list all of your running/stopped/existed containers for you.
+                </dd>
+                <dt class="col-sm-3">docker compose up</dt>
+                <dd class="col-sm-9 p-2">This commands allows you to bring multiple containers up at once within a
+                    service
+                    such
+                    as your application container and a db container, and then connecting your application to the DB.
+                    In addition, this will also create a network for w
+                    This is commonly defined within a docker.compose.yml file.
+                </dd>
+                <dt class="col-sm-3">docker compose down</dt>
+                <dd class="col-sm-9 p-2">This commands will destroy all the containers associated with the service,
+                    along
+                    with
+                    any networks/volumes created
+                </dd>
+            </dl>
         </div>
-        <dl class="row">
-            <dt class="col-sm-3">docker build -t .</dt>
-            <dd class="col-sm-9">An HTML user agent is any device that interprets HTML documents.</dd>
-            <dt class="col-sm-3 text-truncate">docker kill [container_id]</dt>
-            <dd class="col-sm-9">The tree of elements encoded in the source document
-            </dd>
-            <dt class="col-sm-3">docker system prune</dt>
-            <dd class="col-sm-9">The tree of elements encoded in the source document</dd>
-            <dt class="col-sm-3">docker run [container_id]</dt>
-            <dd class="col-sm-9">The tree of elements encoded in the source document.</dd>
-            <dt class="col-sm-3">docker compose up</dt>
-            <dd class="col-sm-9">The tree of elements encoded in the source document.</dd>
-            <dt class="col-sm-3">docker compose down</dt>
-            <dd class="col-sm-9">The tree of elements encoded in the source document.</dd>
-        </dl>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p class="h3">Project Setup</p>
+            <hr class="bg-danger border-2 border-top border-danger" style="height:2px; width:50%; border-width:0">
+            <dl>
+                <dt class="col-sm-3">Bring Up Containers</dt>
+                <dd class="col-sm-9 p-2">To bring up the project please run <strong>docker compose up</strong> command
+                    from
+                    the
+                    root of the project directory where your <em>docker.compose.yml</em> file is located,
+                    this will build/run the image associated with the Dockerfile and create a network configuration.
+                    Within
+                    the docker.compose.yml file,
+                    this application container maps from "80:5000", this mean you'll be able to access it on port 80,
+                    which
+                    would then map to port 5000 within the container.
+                </dd>
+                <dt class="col-sm-3 text-truncate">Access the Container</dt>
+                <dd class="col-sm-9 p-2">To access the container, run <strong>docker exec -it [container_id]</strong>, this will
+                    essentially give you an interactive shell for the container
+                </dd>
+            </dl>
+        </div>
     </div>
 </div>
 <!-- Optional JavaScript -->
@@ -124,10 +171,3 @@
         crossorigin="anonymous"></script>
 </body>
 </html>
-{##}
-{#                <li>docker build -t .</li>#}
-{#                <li>docker kill "container id"</li>#}
-{#                <li>docker system prune</li>#}
-{#                <li>docker run image id</li>#}
-{#                <li>docker compose up</li>#}
-{#                <li>docker compose down</li>#}

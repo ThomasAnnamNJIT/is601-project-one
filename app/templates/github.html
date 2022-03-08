@@ -16,19 +16,11 @@
                 <div class="navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/">Home</a>
+                            <a class="nav-link" aria-current="page" href="/">Home</a>
                         </li>
+
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('content.show', page="docker") }}">Docker</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('content.show', page="github") }}">GitHub</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('content.show', page="python") }}">Python/Flask</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ url_for('content.show', page="ci_cd") }}">CI/CD</a>
+                            <a class="nav-link active" href="#">GitHub</a>
                         </li>
                     </ul>
                 </div>
@@ -36,66 +28,112 @@
         </nav>
     </header>
 </div>
-<div class="container p-5">
+<div class="container p-3">
     <div class="row">
-        <div class="col">
-            <p class="h3">Docker</p>
+        <div class="col-8">
+            <p class="h3">GitHub</p>
+            <hr class="bg-danger border-2 border-top border-danger">
+            <p class="fw-normal"><strong>GitHub</strong> is a platform that allows developers to host/collaborate their
+                codebase on
+                the Web.
+                One of the main features GitHub provides is version control, which keeps track of all the changes, a
+                developer has made within a
+                codebase. This can be shown via commits, issues, tags, or pull requests.
+            </p>
         </div>
-        <hr class="bg-danger border-2 border-top border-danger">
         <div class="col">
-            <p class="fw-normal"><strong>Docker</strong> is a containerization technology/platform for creating and
-                managing containers. The core building blocks for Docker include containers and images. Docker provides
-                an entire ecosystem for building images
-                and containers some of which include:
+            <img src="static/images/Github.jpeg" width="300" height="300" class="rounded float-end" alt="...">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <p class="h3">GitHub Tools</p>
+            <hr class="bg-danger border-2 border-top border-danger">
+            <p class="fw-normal">
+                GitHub provides many services
+                to developers, some of which include:
             <ul class="px-5">
-                <li>Docker Machine</li>
-                <li>Docker Hub</li>
-                <li>Docker CLI</li>
-                <li>Docker Compose</li>
+                <li>GitHub CLI</li>
+                <li>GitHub Actions</li>
+                <li>GitHub Desktop</li>
+                <li>Git Bash (For Windows)</li>
             </ul>
             </p>
         </div>
         <div class="col">
-            <img src="static/images/NJIT.png" width="100" height="50" class="rounded" alt="...">
+            <img src="static/images/GithubCLI.png" width="200" height="200" class="rounded float-end" alt="...">
+            <img src="static/images/GithubActions.png" width="200" height="200" class="rounded float-end" alt="...">
+        </div>
+        <div class="col">
+            <img src="static/images/GithubDesktop.png" width="200" height="200" class="rounded float-end" alt="...">
+            <img src="static/images/GitBash.png" width="200" height="200" class="rounded float-end" alt="...">
         </div>
     </div>
     <div class="row">
         <div class="col">
-            <p class="h3">Containers and Images</p>
-        </div>
-        <hr class="bg-danger border-2 border-top border-danger">
-        <p class="fw-normal">
-            Images are the blueprints for building a container which are commonly defined via a <em>Dockerfile</em> or a
-            <em>docker-compose.yml</em>. Within a Dockerfile, developers providers instructions to build a container,
-            this is done via commands
-            such as <strong>FROM</strong>, <strong>RUN</strong>, <strong>CMD</strong>, <strong>ENTRYPOINT</strong>, etc.
-            Each Dockerfile must be built from a base image, which must be the first instruction within a Dockerfile
-            (i.e FROM). Even though you can pull base images from a custom registry such as ECR, most base images
-            come from DockerHub, which is essentially the app store/repository for all base images).
-        </p>
-    </div>
-    <div class="row">
-        <div class="col">
-            <p class="h3">Docker Commands</p>
-        </div>
-        <div>
+            <p class="h3">GitHub Commands</p>
             <hr class="bg-danger border-2 border-top border-danger" style="height:2px; width:50%; border-width:0">
+            <dl>
+                <dt class="col-sm-3">Repository</dt>
+                <dd class="col-sm-9 p-2">
+                    A repository in GitHub is essentially a directory where you host all your team's folders and files
+                    for
+                    the codebase. To initialize a GitHub repository, this can be done via the GitHub UI, and then can be
+                    cloned locally
+                    or simply via <strong>git init</strong>, which will mark the current directory as a GitHub
+                    repository.
+                </dd>
+                <dt class="col-sm-3">Commit</dt>
+                <dd class="col-sm-9 p-2">
+                    A GitHub commit refers to a set of changes made to a given codebase at any point in time.
+                    Once a commit is made to GitHub, each commit will have a message and a unique git commit SHA.
+                    To make a git commit, one would need to execute the following series of commands:
+                    <ul class="px-5">
+                        <li><strong>git add .</strong></li>
+                        <ul>
+                            <li>This will add of your files that are currently "not staged for commit" into your
+                                commit.
+                            </li>
+                        </ul>
+                        <li><strong>git commit -m 'commit message'</strong></li>
+                        <ul>
+                            <li>
+                                This will give your Git commit a message before it's pushed into a branch
+                            </li>
+                        </ul>
+                        <li><strong>git push origin branch_name</strong></li>
+                        <ul>
+                            <li>
+                                This will push all your changes with the commit message to the branch_name
+                            </li>
+                        </ul>
+                    </ul>
+                </dd>
+                <dt class="col-sm-3">Branches</dt>
+                <dd class="col-sm-9 p-2">
+                    A GitHub branch allows a developer to independently develop new features or fix issues,
+                    independently off the main branch or any other branch within a given repository.
+                    Most branches in GitHub are branched out of a main branch which include the names such as
+                    <em>main</em>, <em>master</em>, or <em>develop</em>. To create a branch, one would need to issue
+                    the following command: <strong>git checkout -b branch_name</strong>, this will make a new branch of
+                    the base branch if it doesn't already exist.
+                </dd>
+                <dt class="col-sm-3">Tags</dt>
+                <dd class="col-sm-9 p-2">
+                    A GitHub tag is reference to a specific point fora repository, which typically marks when you want
+                    to release this code into production
+                    or package your code as version for a library, such as to maven central repository or PIP.
+                </dd>
+                <dt class="col-sm-3">Merging</dt>
+                <dd class="col-sm-9 p-2">
+                    A GitHub merge allows you to take one branch and put it another branch. This is typically done via a
+                    Pull Request, which is an official way to say you want to merge your current branch into another
+                    branch such as
+                    master, and if it has been reviewed by the team
+                    of developers.
+                </dd>
+            </dl>
         </div>
-        <dl class="row">
-            <dt class="col-sm-3">docker build -t .</dt>
-            <dd class="col-sm-9">An HTML user agent is any device that interprets HTML documents.</dd>
-            <dt class="col-sm-3 text-truncate">docker kill [container_id]</dt>
-            <dd class="col-sm-9">The tree of elements encoded in the source document
-            </dd>
-            <dt class="col-sm-3">docker system prune</dt>
-            <dd class="col-sm-9">The tree of elements encoded in the source document</dd>
-            <dt class="col-sm-3">docker run [container_id]</dt>
-            <dd class="col-sm-9">The tree of elements encoded in the source document.</dd>
-            <dt class="col-sm-3">docker compose up</dt>
-            <dd class="col-sm-9">The tree of elements encoded in the source document.</dd>
-            <dt class="col-sm-3">docker compose down</dt>
-            <dd class="col-sm-9">The tree of elements encoded in the source document.</dd>
-        </dl>
     </div>
 </div>
 <!-- Optional JavaScript -->

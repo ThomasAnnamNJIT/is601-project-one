@@ -81,31 +81,51 @@
                 <span class="visually-hidden">Next</span>
             </button>
         </div>
-        <div class="card-group">
-            <div class="card">
-                <img src="static/images/About.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">About</h5>
-                    <p class="card-text">
-                        This is Project One of IS601, which represents a web application of all the technologies that we
-                        have
-                        learned so far in this semester.
-                        The technologies include the following:
-                    <ul>
-                        <li>Git</li>
-                        <li>Docker</li>
-                        <li>Python/Flask</li>
-                        <li>Github Actions (CI/CD)</li>
-                    </ul>
-                    </p>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <img src="static/images/About.jpg" width="300" height="300" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Experience</h5>
+                        <p class="card-text">
+                            My name is Thomas Annam, and I'm currently an M.S student in Computer Science. I graduated
+                            from
+                            Rutgers
+                            University in 2018 with a B.S in Computer Science and a minor in Economics.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="card">
-                <img src="static/images/Notes.jpeg" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Notes</h5>
-                    <a href="{{ url_for('content.show', page="LOL") }}" class="btn btn-info" role="button">Click Here To Learn
-                        More!</a>
+            <div class="col">
+                <div class="card">
+                    <img src="static/images/WorkExperience.jpeg" width="300" height="300" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Experience</h5>
+                        <p class="card-text">
+                            I've been a Software Engineer for the past three years working at various companies as a full stack developer. The companies
+                            I've worked for include Cerner as a Software Engineer, and currently, at Comcast, I'm a Software Engineer II.
+                            I've used many technologies at my time at these two companies which range from Python, Java,
+                            React, Docker, K8S, and AWS.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <img src="static/images/Description.jpeg"  width="300" height="300" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Project Description</h5>
+                        <p class="card-text">
+                            This is Project One for IS601, which represents a web application of all the technologies
+                            that we have learned so far in this semester. The technologies include the following:
+                        <ul>
+                            <li>Git</li>
+                            <li>Docker</li>
+                            <li>Python/Flask</li>
+                            <li>Github Actions (CI/CD)</li>
+                        </ul>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

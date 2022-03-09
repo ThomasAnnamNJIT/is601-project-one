@@ -49,7 +49,7 @@
                 </p>
             </blockquote>
             With this constant integration on a day-to-day basis, some benefits that this produces as described by
-            Martin Fowler can be summarized as the following :
+            Martin Fowler can be summarized as the following:
             <ul class="px-5">
                 <li>Better collaboration between software development teams</li>
                 <li>Smaller code changes</li>
@@ -68,10 +68,9 @@
             <hr class="bg-danger border-2 border-top border-danger">
             <p class="fw-normal"><strong>Github Actions</strong> is a service that GitHub provides in order for teams or
                 developers
-                to have the ability for CI/CD deployments via a pipeline. GitHub Actions are similar to other CI/CD
+                to have the ability for CI/CD deployments via a pipeline on GitHub. GitHub Actions are similar to other CI/CD
                 pipelines such as Jenkins, Travis CI, or Concourse.
-                GitHub Actions are compromised of workflows which are completely automated and configurable that you can
-                add to your GitHub Repository.
+                GitHub Actions are compromised of workflows that you can add to your GitHub Repository.
                 GitHub Actions is purely event based driven, which means your workflow responds to a specific event
                 after it has been triggered. Some events that your workflow can correspond to include the following:
             <ul class="px-5">
@@ -79,12 +78,12 @@
                 <li>PR creation</li>
                 <li>Scheduled Events (i.e. cron job)</li>
             </ul>
-            All workflows must be defined in YAML syntax, and defined under <em>.github/workflows</em>
+            All workflows must be defined in YAML syntax under <em>.github/workflows</em>
             </p>
         </div>
         <div class="col">
             <img src="static/images/GithubActions.png" width="400" height="400" class="rounded float-end" alt="...">
-            <p class="h3">Documentation</p>
+            <p class="h3">References</p>
             <div class="card">
                 <ul class="list-group list-group-flush">
                     <li class="list-group-item">
@@ -100,6 +99,11 @@
                            target="_blank"
                            class="link-primary">Production Workflow</a>
                     </li>
+                    <li class="list-group-item">
+                        <a href="https://www.martinfowler.com/articles/continuousIntegration.html"
+                           target="_blank"
+                           class="link-primary">CI/CD Article</a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -113,17 +117,17 @@
             <div class="container p-3">
                 <img src="static/images/DevWorkflow.png" class="rounded" alt="...">
                 <p class="text-justify">
-                    A workflow must respond to an event, as discussed above, this event can be anything that ranges from
+                    A workflow must respond to an event, as discussed in the section above, this event can be anything that ranges from
                     issues, PRs, or scheduled events.
                     This is defined in the <em>on</em> section of the YAML file of the workflow. The <em>on</em> section
                     as shown above says to trigger this workflow
-                    whenever a PR request is raised from any feature that wants to be <strong>merged</strong> into main.
+                    whenever a PR request is raised from any feature branch that wants to be <strong>merged</strong> into main.
                     <br/>
                     Github Actions are commands that are developed by you or the community to perform a task. Each
                     action is performed within a step, which are individual tasks of a workflow.
                     Each of these steps performed make up a job. In the diagram shown above, we are using an action that
-                    will allow us to deploy our application onto Heroku, where specify the configurations within
-                    our <strong>heroku.yml</strong> file with the build context being our <strong>Dockerfile</strong>
+                    will allow us to deploy our application onto Heroku, where we specify the configurations within
+                    our <strong>heroku.yml</strong> file with the build context being our <strong>Dockerfile</strong>.
                 </p>
             </div>
             <p class="h3">

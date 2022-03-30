@@ -187,6 +187,85 @@
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-8">
+            <p class="h3">Overview of Design Patterns</p>
+            <hr class="bg-danger border-2 border-top border-danger">
+            A <strong>design pattern</strong> is defined as a "general repeatable solution to a commonly occurring
+            problem in software design" (https://sourcemaking.com/design_patterns).
+            The benefits of design pattern include the following:
+            <ul class="px-5">
+                <li>Speed up of the development proces</li>
+                <li>Reduce bugs/defects earlier in
+                    the development process
+                </li>
+                <li>Better code quality (i.e improves readability)</li>
+            </ul>
+            There are several types of design patterns which can be divided into the following categories:
+            <ul class="px-5">
+                <li>Creational</li>
+                <li>Structural</li>
+                <li>Behavioral</li>
+            </ul>
+            <div>
+                <dl>
+                    <dt class="col-sm-3">Creational</dt>
+                    <dd class="col-sm-9 p-2">
+                        Creational design patterns are designed for creating classes, some design patterns that are
+                        associated with creational design patterns
+                        include Singleton and Factory. The <strong>Singleton</strong> design pattern ensures only one
+                        instance of class can exist,
+                        this is most typically used within multithreading for synchronization purposes. The <strong>Factory</strong>
+                        design pattern ensures we can create
+                        any instance of derived class, this is most commonly done with a parent-child relationships, we
+                        will see how we use the factory design pattern in our Calculator class.
+                    </dd>
+                    <dt class="col-sm-3 text-truncate">Structural</dt>
+                    <dd class="col-sm-9 p-2">
+                        Structural design patterns are about composition, some design patterns that are
+                        associated with creational design patterns
+                        include Decorator and Proxy.
+                    </dd>
+                    <dt class="col-sm-3">Behavioral</dt>
+                    <dd class="col-sm-9 p-2">
+                        Behavioral design patterns are about class communication with one another, some design patterns
+                        that are
+                        associated with behavioral design patterns
+                        include Observer and Chain of Responsibility. The <strong>Observer</strong> design pattern
+                        notifies of changes to any number of classes,
+                        which is a highly effective when dealing with event driven architecture. The Chain of
+                        Responsibility deals with class delegation in terms of whether it wants to deal the request or
+                        not,
+                        or pass it to off to another handler. To see an example of the Chain Responsibility, please
+                        refer to this example shown
+                        <a href="https://refactoring.guru/design-patterns/chain-of-responsibility"
+                           class="link-primary">here</a>.
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <p class="h3">Overview of SOLID</p>
+            <hr class="bg-danger border-2 border-top border-danger">
+            <p class="fw-normal"><strong>SOLID</strong> is a programming methodology that was established by both Robert
+                C. Martin and Michael Feathers.
+                These SOLID principles allow developers principles to "...create more maintainable, understandable, and
+                flexible software". The principles of SOLID include the following:
+            <ul class="px-5">
+                <li>Single Responsibility Principle</li>
+                <li>Open/Closed Principle</li>
+                <li>Liskov Substitution Principle</li>
+                <li>Interface Segregation Principle</li>
+                <li>Dependency Inversion Principle</li>
+            </ul>
+            </p>
+            To learn more about SOLID and how we use it in our Calculator example, please refer to <a
+                href="https://refactoring.guru/design-patterns/chain-of-responsibility"
+                class="link-primary">here</a>.
+        </div>
+    </div>
 </div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

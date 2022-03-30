@@ -1,3 +1,5 @@
+"""This test the homepage"""
+
 
 def test_request_index(client):
     """This makes the index page request"""

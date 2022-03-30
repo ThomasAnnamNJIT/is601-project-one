@@ -1,26 +1,27 @@
-<html>
-<head>
-    <title>Thomas Annam Project One</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>Object Orientated Programming</title>
+    <link href="Object%20Orientated%20Programming_files/bootstrap.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 <body>
 <div>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" href="/">
-                    <img src="static/images/NJIT.png" width="100" height="50" class="rounded" alt="...">
-                    IS601
+                <a class="navbar-brand" href="http://localhost/">
+                    <img src="Object%20Orientated%20Programming_files/NJIT.png" class="rounded" alt="..." width="100" height="50">
+                    IS601 Project One
                 </a>
                 <div class="navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                            <a class="nav-link" aria-current="page" href="http://localhost/">Home</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">Docker</a>
+                            <a class="nav-link active" href="#">OOP</a>
                         </li>
                     </ul>
                 </div>
@@ -31,62 +32,71 @@
 <div class="container p-3">
     <div class="row">
         <div class="col-8">
-            <p class="h3">Docker</p>
+            <p class="h3">Object Orientated Programming (OOP)</p>
             <hr class="bg-danger border-2 border-top border-danger">
-            <p class="fw-normal"><strong>Docker</strong> is a containerization technology/platform for creating and
-                managing containers. The core building blocks for Docker include containers and images. Docker provides
-                an entire ecosystem for building images
-                and containers some of which include:
-            <ul class="px-5">
-                <li>Docker Machine</li>
-                <li>Docker Hub</li>
-                <li>Docker CLI</li>
-                <li>Docker Compose</li>
+            <p class="fw-normal"><strong>Object Orientated Programming</strong> also known as OOP is a software design
+                model that allows developers and their teams to write
+                code around modeling objects, which can illustrated through <em>classes</em> and <em>methods</em>.
+                Classes allow developers to build blueprints around the object to be modeled (i.e. abstractions) which
+                are defined via fields, instance methods, static methods, etc.
+                Meanwhile, methods are actions/behaviors that are defined for a given class. Methods are used to define
+                instructions
+                to perform a repetitive operation in order to fetch a result, which can be generalized in one way or
+                form.
+                Now that we are familiar with OOP and some cornerstones that OOP entails (i.e. classes and methods), we
+                will be discussing the
+                following terms:
+            </p><ul class="px-5">
+                <li>Abstraction</li>
+                <li>Encapsulation</li>
+                <li>Inheritance</li>
+                <li>Polymorphism</li>
             </ul>
-            </p>
+            <p></p>
         </div>
         <div class="col">
-            <img src="static/images/Docker.png" width="300" height="300" class="rounded float-end" alt="...">
+            <img src="Object%20Orientated%20Programming_files/PythonOOP.png" alt="..." width="410" height="">
         </div>
     </div>
     <div class="row">
         <div class="col-8">
-            <p class="h3">Containers and Images</p>
+            <p class="h3">Calculator</p>
             <hr class="bg-danger border-2 border-top border-danger">
-            <p class="fw-normal">
-                <strong>Images</strong> are the blueprints for building a container which are commonly defined via a
-                <em>Dockerfile</em>
-                or a
-                <em>docker-compose.yml</em>. Within a Dockerfile, developers providers instructions to build a container
-                such as:
-            <ul class="px-5">
-                <li>FROM</li>
-                <li>RUN</li>
-                <li>CMD</li>
-                <li>ENTRYPOINT</li>
-            </ul>
-            In addition, images contain all of our code and all the dependencies that we want to run before deploying a
-            container.
-            This can include installing dependencies from a <em>package.json</em> via the RUN command.
-            <br/>
-            <br/>
-            <strong>Containers</strong> are the runtime version of the image, or the actual running unit of code that we
-            built from the image with the Dockerfile.
-            A container allows us to output the same application and same behavior, regardless of where it is executed,
-            in other words, we're essentially "packaging" our entire machine.
-            This allows for distribution of an application to be efficient.
-            <br/>
-            <br/>
-            Even though you can pull base images from a custom registry such as ECR, most base images
-            come from DockerHub, which is essentially the app store/repository for all base images).
-            Click <a href="https://hub.docker.com/repository/docker/thomasannam/is601-project-one" class="link-primary">here</a>
-            to view this project's Docker image on DockerHub
-            </p>
+            <div>
+                <dl>
+                    <dt class="col-sm-3">Encapsulation</dt>
+                    <dd class="col-sm-9 p-2">This allows you to build an image from the location of your Dockerfile and
+                        allows
+                        you
+                        to tag it with a name.
+                    </dd>
+                    <dt class="col-sm-3 text-truncate">Inheritance</dt>
+                    <dd class="col-sm-9 p-2">This allows you to destroy/remove a container without having to stop it
+                        beforehand
+                    </dd>
+                    <dt class="col-sm-3">Polymorphism</dt>
+                    <dd class="col-sm-9 p-2">This command will destroy any containers that are stopped containers or
+                        remove
+                        any
+                        dangling images,
+                        which include those that are untagged.
+                    </dd>
+                    <dt class="col-sm-3">Abstraction</dt>
+                    <dd class="col-sm-9 p-2">This command allows you to run a container after you have build an image
+                        from
+                        the
+                        docker build command;
+                        however, if you simply run this command without having built an image, it will build an image
+                        first,
+                        and
+                        then run the container for you automatically!
+                    </dd>
+                </dl>
+            </div>
         </div>
         <div class="col">
-            <img src="static/images/DockerImageContainer.png" width="300" height="300" class="rounded float-end p-3"
-                 alt="...">
-            <img src="static/images/DockerHub.png" width="300" height="300" class="rounded float-end mx-auto" alt="...">
+            <img src="Object%20Orientated%20Programming_files/OOPPython.jpg" class="img-fluid rounded float-end p-1" alt="...">
+            <img src="Object%20Orientated%20Programming_files/PillarsOfOOP.jpg" class="img-fluid rounded float-end mx-auto" alt="...">
         </div>
     </div>
     <div class="row">
@@ -146,7 +156,8 @@
             <hr class="bg-danger border-2 border-top border-danger" style="height:2px; width:50%; border-width:0">
             <dl>
                 <dt class="col-sm-3">Bring Up Containers</dt>
-                <dd class="col-sm-9 p-2">To bring up the project please run <strong>docker compose up</strong> in the command line
+                <dd class="col-sm-9 p-2">To bring up the project please run <strong>docker compose up</strong> in the
+                    command line
                     from
                     the
                     root of the project directory where your <em>docker.compose.yml</em> file is located,
@@ -167,8 +178,6 @@
 </div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-</body>
-</html>
+<script src="Object%20Orientated%20Programming_files/bootstrap.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+</body></html>

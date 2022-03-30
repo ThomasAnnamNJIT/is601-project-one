@@ -67,8 +67,6 @@
                         aria-label="Slide 7"></button>
                 <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7"
                         aria-label="Slide 8"></button>
-                <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="8"
-                        aria-label="Slide 9"></button>
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active text-center" data-bs-interval="10000">
@@ -92,6 +90,11 @@
                     </a>
                 </div>
                 <div class="carousel-item text-center">
+                    <a href="{{ url_for('content.show', page='terms') }}">
+                        <img src="static/images/OOPGlossary.jpeg" width="500" height="500" alt="...">
+                    </a>
+                </div>
+                <div class="carousel-item text-center">
                     <a href="{{ url_for('content.show', page='oop') }}">
                         <img src="static/images/OOP.jpeg" width="" height="500" alt="...">
                     </a>
@@ -103,12 +106,7 @@
                 </div>
                 <div class="carousel-item text-center">
                     <a href="{{ url_for('content.show', page='testing') }}">
-                        <img src="static/images/Solid.jpeg" width="500" height="500" alt="...">
-                    </a>
-                </div>
-                <div class="carousel-item text-center">
-                    <a href="{{ url_for('content.show', page='terms') }}">
-                        <img src="static/images/OOPGlossary.jpeg" width="500" height="500" alt="...">
+                        <img src="static/images/PythonUnitTesting.jpg" width="500" height="500" alt="...">
                     </a>
                 </div>
             </div>

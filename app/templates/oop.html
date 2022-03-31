@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OOP</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+<div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="static/images/NJIT.png" width="100" height="50" class="rounded" alt="...">
+                    IS601
+                </a>
+                <div class="navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">OOP</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div>
+<div class="container p-3">
+    <div class="row">
+        <div class="col-8">
+            <p class="h3">OOP</p>
+            <hr class="bg-danger border-2 border-top border-danger">
+            <p class="fw-normal"><strong>Object Orientated Programming</strong> is a software technique that allows
+                software development teams/developers
+                to model their functional and business requirements (i.e code) based on objects is one of the most
+                important benefits within the development cycle, which are done via classes.
+                These are done via <em>classes</em> and <em>methods</em>.
+                Classes allow developers to build blueprints around the object(s) to be modeled (i.e. abstractions)
+                which
+                are defined via fields, instance methods, static methods, etc.
+                Meanwhile, methods are actions/behaviors that are defined for a given class. Methods are used to define
+                instructions
+                to perform a repetitive operation in order to fetch a result, which can be generalized in one way or
+                form.
+                Now that we are familiar with OOP and some cornerstones that OOP entails (i.e. classes and methods), we
+                will be discussing the
+                following terms:
+            <ul class="px-5">
+                <li>Abstraction</li>
+                <li>Encapsulation</li>
+                <li>Inheritance</li>
+                <li>Polymorphism</li>
+            </ul>
+            </p>
+        </div>
+        <div class="col">
+            <img src="static/images/PythonClassesObjects.png" width="400" height="400" class="rounded float-end p-2"
+                 alt="...">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <p class="h3">OOP Terminology</p>
+            <hr class="bg-danger border-2 border-top border-danger">
+            <div>
+                <dl>
+                    <dt class="col-sm-3">Abstraction</dt>
+                    <dd class="col-sm-9 p-2">
+                        Classes are blueprints around the object(s) to be modeled. Abstraction is a way to provide
+                        common interfaces of methods and APIs,
+                        which are then implemented by their subclasses.
+                        Here's an example of how to define an <strong>abstract class</strong> in Python:
+                        <p class="fw-normal p-3">
+                            <img src="static/images/AbstractExample.png" width="700" height="500" class="rounded"
+                                 alt="...">
+                        </p>
+                        We first create a regular class in Python and then extend it with <strong>ABC</strong>, by doing
+                        so
+                        we cannot instantiate this class directly, and have marked this class an abstract class. When we
+                        extend Vehicle, all of its subclass must implement
+                        the <em>num_of_wheels</em> method, otherwise it cannot be instantiated. Here's an example of a
+                        subclass for a vehicle:
+                        <p class="fw-normal p-3">
+                            <img src="static/images/Car.png" width="700" height="500" class="rounded"
+                                 alt="...">
+                        </p>
+                        Now that we are familiar with how abstraction works, please refer <a href="#abstraction"
+                                                                                             class="link-primary">here</a>
+                        to how we use abstraction
+                        in our
+                        calculator class.
+                    </dd>
+                    <dt class="col-sm-3 text-truncate">Inheritance</dt>
+                    <dd class="col-sm-9 p-2">
+                        Inheritance allows one class to inherit attributes and methods from one class to another. Some
+                        features' inheritance provides includes
+                        the following:
+                        <ul class="px-5">
+                            <li>"...represents real-world relationships well"</li>
+                            <li>"...It provides reusability of a code.
+                                We don’t have to write the same code again and again.
+                                Also, it allows us to add more features to a class without modifying it"
+                            </li>
+                        </ul>
+                        In other words, from a Python point of view, this means all the fields that are
+                        <strong>public</strong> and <strong>protected</strong> are
+                        automatically inherited from the parent class to the child class. Here's an example of how
+                        inheritance is used:
+                        <p class="fw-normal p-3">
+                            <img src="static/images/Car.png" width="700" height="500" class="rounded"
+                                 alt="...">
+                        </p>
+                    </dd>
+                    <dt class="col-sm-3">Polymorphism</dt>
+                    <dd class="col-sm-9 p-2">
+                        Polymorphism allows an object to take on many forms. This is true when one class is
+                        inherited from another, as stated above,
+                        inheritance provides an <em>is a</em> relationship, therefore, when class B extends A, it can be
+                        referenced as both Class B or Class A. Here's an example of polymorphism using our vehicle
+                        example:
+                        <p class="fw-normal p-3">
+                            <img src="static/images/PolymorphismCar.png" width="700" height="500" class="rounded"
+                                 alt="...">
+                        </p>
+                        With the above example, we can create a Car object by either Car or Vehicle, however, as stated
+                        above
+                        since Car <strong>extends</strong> Vehicle, we also know Vehicle can be in the shape of a Car.
+                        Now that we are familiar with how polymorphism works, please refer here to how polymorphism is
+                        used in our
+                        calculator class.
+                    </dd>
+                    <dt class="col-sm-3">Encapsulation</dt>
+                    <dd class="col-sm-9 p-2">
+                        Encapsulation means only methods in the class with the variables can refer to the instance
+                        variable.
+                        In other words, only certain fields of a given classes are able to called from other parts of
+                        your program.
+                        The three scopes that Python has includes public (this is the default), protected, and private.
+                        Public allows a field/method to be accessed anywhere in your program.
+                        Protected allows access for only the class itself as well as any subclasses. Lastly, private
+                        access only allows for the class itself to access it's methods.
+                        <p class="fw-normal p-3">
+                            <img src="static/images/EncapsulationPartOne.png" width="700" height="500" class="rounded"
+                                 alt="...">
+                        </p>
+                        <p class="fw-normal p-3">
+                            <img src="static/images/EncapsulationPartTwo.png" width="700" height="500" class="rounded"
+                                 alt="...">
+                        </p>
+                        With the above example, we see that name is a private variable, and that the only way it can be
+                        passed is either within the Vehicle class itself (i.e. the <strong>base</strong> class),
+                        or by accessing it via a getter method within its subclasses.
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="col">
+            <img src="static/images/OOPPython.jpg" width="400" height="400" class="rounded float-end p-2"
+                 alt="...">
+            <img src="static/images/PillarsOfOOP.jpg" width="400" height="400" class="rounded float-end p-2"
+                 alt="...">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p class="h3">Example: Calculator</p>
+            <hr class="bg-danger border-2 border-top border-danger" style="height:2px; width:50%; border-width:0">
+            <dl>
+                <dt id="abstraction" class="col-sm-3">Abstraction/Inheritance</dt>
+                <dd class="col-sm-9 p-2">
+                    <p class="fw-normal p-3">
+                        <img src="static/images/CalculatorBaseOne.png" width="700" height="500" class="rounded"
+                             alt="...">
+                    </p>
+                    <p class="fw-normal p-3">
+                        <img src="static/images/Addition.png" width="700" height="500" class="rounded"
+                             alt="...">
+                    </p>
+                    <p class="fw-normal p-3">
+                        <img src="static/images/Subtraction.png" width="700" height="500" class="rounded"
+                             alt="...">
+                    </p>
+                    <p class="fw-normal p-3">
+                        <img src="static/images/Multiplication.png" width="700" height="500" class="rounded"
+                             alt="...">
+                    </p>
+                </dd>
+                <dt class="col-sm-3 text-truncate">Encapsulation</dt>
+                <dd class="col-sm-9 p-2">
+                    <p class="fw-normal p-3">
+                        <img src="static/images/CalculatorBaseOne.png" width="700" height="500" class="rounded"
+                             alt="...">
+                    </p>
+                    <p class="fw-normal p-3">
+                        <img src="static/images/Addition.png" width="700" height="500" class="rounded"
+                             alt="...">
+                    </p>
+                </dd>
+                <dt class="col-sm-3 text-truncate">Polymorphism</dt>
+                <dd class="col-sm-9 p-2">
+                    <p class="fw-normal p-3">
+                        <img src="static/images/CalculatorDesignPattern.png" width="700" height="500" class="rounded"
+                             alt="...">
+                    </p>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</html>

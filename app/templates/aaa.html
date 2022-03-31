@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AAA Testing</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+<div>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="/">
+                    <img src="static/images/NJIT.png" width="100" height="50" class="rounded" alt="...">
+                    IS601
+                </a>
+                <div class="navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">AAA</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+</div>
+<div class="container p-3">
+    <div class="row">
+        <div class="col-8">
+            <p class="h3">Testing</p>
+            <hr class="bg-danger border-2 border-top border-danger">
+            <p class="fw-normal"><strong>Testing</strong> is one of the most important benefits within the software
+                development
+                lifecycle. This is because it allows development teams/developers to find any bugs/defects within their
+                code before going
+                into production, ensures quality code is written, and, lastly determines whether
+                both functional and business requirements are being met for the software being rolled out. A more
+                precise definition of testing can be in the form of software testing, which is defined as
+                "...the process of evaluating and verifying that a software product or application does what it is
+                supposed to do" (https://www.ibm.com/topics/software-testing). <br/>
+                The two most common software testing are <strong>integration/unit</strong> testing. <strong>Unit
+                    testing</strong> is testing a particular
+                piece of code (i.e a method), which can be thought of as the subject under test. Typically, with unit
+                testing, developers
+                mock out any external dependencies such as database operations or 3rd party API calls. <strong>Integration
+                    testing</strong> involves testing all the entire software application, which can be from a UI to the
+                backend or
+                an API to call the backend (via Postman or curl).
+                Now that we are familiar with what testing is, the different types of tests, and why they are important
+                in the role of software development, we will now discuss a pattern for writing quality tests,
+                which is known as AAA testing.
+            </p>
+        </div>
+        <div class="col">
+            <img src="static/images/Software-Testing.jpg" class="img-fluid rounded float-end p-1" alt="...">
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
+            <p class="h3">AAA (Arrange, Act, and Assert)</p>
+            <hr class="bg-danger border-2 border-top border-danger">
+            <div>
+                <dl>
+                    <dt class="col-sm-3">Arrange</dt>
+                    <dd class="col-sm-9 p-2">
+                        This step of the AAA testing is for instantiating objects and setting up the inputs for your
+                        object.
+                        For example, within the Addition class, how way to <strong>arrange</strong> is by doing the
+                        following:
+                        <p class="fw-normal p-3">
+                            <img src="static/images/AdditionArrange.png" class="rounded"
+                                 alt="...">
+                        </p>
+                        With the above example, we are instantiating an Addition object class and initializing it with
+                        a list of tuples.
+                    </dd>
+                    <dt class="col-sm-3 text-truncate">Act</dt>
+                    <dd class="col-sm-9 p-2">
+                        This step of the AAA testing is for calling the method to be tested on, which is the actual
+                        method itself within a service or an api call such as a POST/GET.
+                        For example, within the Addition class, we want to add the list of tuples, and to do that we
+                        would need to call <strong>perform_operation</strong> method,
+                        which we can do by the following:
+                        <p class="fw-normal p-3">
+                            <img src="static/images/AdditionAct.png" class="rounded"
+                                 alt="...">
+                        </p>
+                    </dd>
+                    <dt class="col-sm-3">Assert</dt>
+                    <dd class="col-sm-9 p-2">
+                        This step of the AAA testing is to test whether we actually recevied the output we wanted, in
+                        other words, actual versus expected.
+                        We do this typically in Python via asserts statements, so with the above example, we expect our
+                        final output to be 10.0,
+                        so to assert a statement in Python for unit testing, we can do so by the following:
+                        <p class="fw-normal p-3">
+                            <img src="static/images/AdditionAssert.png" class="rounded"
+                                 alt="...">
+                        </p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+        <div class="col">
+            <img src="static/images/AAAUnitTesting.png" class="img-fluid rounded float-end p-1"
+                 alt="...">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p class="h3">Example: Calculator AAA Test</p>
+            <hr class="bg-danger border-2 border-top border-danger" style="height:2px; width:50%; border-width:0">
+            <p>
+                Now that we are familiar with what AAA testing is and how it works, <br/>we can apply this knowledge
+                when
+                writing our unit test for the multiplication class:
+                <img src="static/images/MultiplicationAAA.png" width="700" height="500" class="rounded"
+                     alt="...">
+            </p>
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</body>
+</html>

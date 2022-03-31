@@ -11,7 +11,7 @@
             <div class="container">
                 <a class="navbar-brand" href="/">
                     <img src="static/images/NJIT.png" width="100" height="50" class="rounded" alt="...">
-                    IS601 Project One
+                    IS601
                 </a>
                 <div class="navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
@@ -55,9 +55,12 @@
             <p class="h3">PyTest</p>
             <hr class="bg-danger border-2 border-top border-danger">
             <p class="fw-normal"><strong>PyTest</strong> is a testing framework in Python that allows you to write unit
-                tests. I was able to create all my content pages using Jinja2, which is templating engine in Python to render html content.
-                I first setup a Flask Blueprint as defined within this directory <strong>app/content/__init__.py</strong>, and created routes
-                for all the html pages and the locations to find the templates and static folder (also configured in the BluePrint) for <strong>render_templates</strong>.
+                tests. I was able to create all my content pages using Jinja2, which is templating engine in Python to
+                render html content.
+                I first setup a Flask Blueprint as defined within this directory
+                <strong>app/content/__init__.py</strong>, and created routes
+                for all the html pages and the locations to find the templates and static folder (also configured in the
+                BluePrint) for <strong>render_templates</strong>.
                 To get started with pytest, you must have a <em>pytest.ini</em> file, which allows you to give the path
                 to where your tests are located via
                 <em>testpaths</em>.
@@ -65,8 +68,7 @@
             <p class="fw-normal">
                 Here's an example of a unit test using PyTest:
             <p class="fw-normal p-3">
-                <img src="static/images/UnitTest.png" width="700" height="500" class="rounded" alt="...">
-
+                <img src="static/images/UnitTest.png" width="300" height="300" class="rounded" alt="...">
             </p>
             The above test makes a GET request to the index page (i.e. /) of the application. It will then check to see
             if it was successful in doing so with a response
@@ -76,28 +78,7 @@
             </p>
         </div>
         <div class="col">
-            <p class="h3">Documentation</p>
-            <div class="card">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">
-                        <a href="https://flask.palletsprojects.com/en/2.0.x/" target="_blank"
-                           class="link-primary">Flask</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="https://docs.pytest.org/en/6.2.x/" target="_blank" class="link-primary">PyTest</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="https://flask.palletsprojects.com/en/2.0.x/blueprints/"
-                           target="_blank"
-                           class="link-primary">BluePrint</a>
-                    </li>
-                    <li class="list-group-item">
-                        <a href="https://github.com/ThomasAnnamNJIT/is601-project-one"
-                           target="_blank"
-                           class="link-primary">Project</a>
-                    </li>
-                </ul>
-            </div>
+            <img src="static/images/PyTest.png" width="300" height="300" class="rounded float-end m-2" alt="...">
         </div>
     </div>
     <div class="row">
@@ -107,7 +88,8 @@
             <img src="static/images/ProjectStructure.png" class="rounded" alt="...">
             <dl>
                 <dt class="col-sm-3">.github/workflows</dt>
-                <dd class="col-sm-9">This is where you define your GitHub workflows for any environment using GitHub Actions.
+                <dd class="col-sm-9">This is where you define your GitHub workflows for any environment using GitHub
+                    Actions.
                 </dd>
                 <dt class="col-sm-3">app/templates</dt>
                 <dd class="col-sm-9">
@@ -128,7 +110,8 @@
                 </dd>
                 <dt class="col-sm-3">app/content/__init__.py</dt>
                 <dd class="col-sm-9">
-                    This is a python package which currently holds the BluePrint configuration for the content pages (i.e. your controller/API).
+                    This is a python package which currently holds the BluePrint configuration for the content pages
+                    (i.e. your controller/API).
                 </dd>
                 <dt class="col-sm-3">tests</dt>
                 <dd class="col-sm-9">
@@ -136,7 +119,8 @@
                 </dd>
                 <dt class="col-sm-3">tests/content_pages_test.py</dt>
                 <dd class="col-sm-9">
-                    This is a python file which contains your unit tests for your code. In this example, it will test all the routes that are defined within the content pages
+                    This is a python file which contains your unit tests for your code. In this example, it will test
+                    all the routes that are defined within the content pages
                     (BluePrint).
                 </dd>
                 <dt class="col-sm-3">tests/conftest.py</dt>
@@ -172,9 +156,35 @@
                 </dd>
                 <dt class="col-sm-3">requirements.txt</dt>
                 <dd class="col-sm-9">
-                    This file is where you define all your python packages that you want as dependencies for your project.
+                    This file is where you define all your python packages that you want as dependencies for your
+                    project.
                 </dd>
             </dl>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <p class="h3">References</p>
+            <hr class="bg-danger border-2 border-top border-danger">
+            <ul class="list-unstyled">
+                <li>
+                    <a href="https://flask.palletsprojects.com/en/2.0.x/" target="_blank"
+                       class="link-primary">Flask</a>
+                </li>
+                <li>
+                    <a href="https://docs.pytest.org/en/6.2.x/" target="_blank" class="link-primary">PyTest</a>
+                </li>
+                <li>
+                    <a href="https://flask.palletsprojects.com/en/2.0.x/blueprints/"
+                       target="_blank"
+                       class="link-primary">BluePrint</a>
+                </li>
+                <li>
+                    <a href="https://github.com/ThomasAnnamNJIT/is601-project-one"
+                       target="_blank"
+                       class="link-primary">Project</a>
+                </li>
+            </ul>
         </div>
     </div>
 </div>

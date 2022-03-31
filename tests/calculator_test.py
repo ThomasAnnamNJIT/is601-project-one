@@ -1,6 +1,7 @@
-"""This makes the calculator unit test setup"""
+"""This makes the calculator operation unit test setup"""
 
 from app.calculator.add import Addition
+from app.calculator.models import CalculatorOperation
 from app.calculator.multiply import Multiplication
 from app.calculator.subtract import Subtraction
 
@@ -33,3 +34,15 @@ def test_calculator_subtracts():
     result = subtraction.perform_operation()
     # Assert
     assert result == 6.0
+
+
+def test_calculator_factory_pattern():
+    """Tests that the factory pattern creates
+    any instance of the Calculator class can subtract a list of tuples correctly"""
+    # Arrange
+    values = [(1, 2), (3, 10)]
+    # Act
+    subtraction = Subtraction.create(values)
+    # Assert
+    assert isinstance(subtraction, CalculatorOperation)
+    assert isinstance(subtraction, Subtraction)

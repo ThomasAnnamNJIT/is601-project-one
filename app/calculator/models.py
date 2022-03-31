@@ -13,7 +13,8 @@ class CalculatorOperation(ABC):
         raise NotImplementedError("Not implemented")
 
     @classmethod
-    def create(cls, tuple_list: tuple):
+    def create(cls, tuple_list: List[Tuple[int, int]]):
+        """ factory design pattern to create instances of a calculator"""
         return cls(tuple_list)
 
     def get_values(self):

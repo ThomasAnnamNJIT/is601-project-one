@@ -56,6 +56,26 @@
         <div class="col-8">
             <p class="h3">SOLID Terminology</p>
             <hr class="bg-danger border-2 border-top border-danger">
+            <figure class="figure">
+                <img src="static/images/CalculatorBaseOne.png" class="figure-img img-fluid rounded"
+                     alt="">
+                <figcaption class="figure-caption">Calculator Base Class.</figcaption>
+            </figure>
+            <figure class="figure">
+                <img src="static/images/Addition.png" class="figure-img img-fluid rounded"
+                     alt="">
+                <figcaption class="figure-caption">Addition implementation for the Calculator class.</figcaption>
+            </figure>
+            <figure class="figure">
+                <img src="static/images/Subtraction.png" class="figure-img img-fluid rounded"
+                     alt="">
+                <figcaption class="figure-caption">Subtraction implementation for the Calculator class.</figcaption>
+            </figure>
+            <figure class="figure">
+                <img src="static/images/Multiplication.png" class="figure-img img-fluid rounded"
+                     alt="">
+                <figcaption class="figure-caption">Multiplication implementation for the Calculator class</figcaption>
+            </figure>
             <div>
                 <dl>
                     <dt class="col-sm-3">Single Responsibility</dt>
@@ -77,11 +97,12 @@
                             </footer>
                         </blockquote>
                         This is demonstrated within our
-                        Calculator example, where we have three subclasses which all extend from CalculatorOperation
-                        (i.e. abstract base class/interface),
+                        Calculator example shown in the above figures, where we have three subclasses which all extend
+                        from CalculatorOperation
+                        (i.e. abstract base class),
                         which are Addition, Subtraction, and Multiplication. All these subclasses have only single
                         responsibility
-                        which is to either <strong>add, subtraction, or multiply</strong>, respectively. In essence,
+                        which is to either <strong>add, subtract, or multiply</strong>, respectively. In essence,
                         each class provides
                         its own functionality without affecting the other classes.
                     </dd>
@@ -101,16 +122,15 @@
                                     title="Source Title">https://www.oodesign.com/open-close-principle.html</cite>
                             </footer>
                         </blockquote>
-                        In our Calculator example, we provide an abstract base class called CalculatorOperation, which
+                        In our Calculator example shown above, we provide an abstract base class called
+                        CalculatorOperation, which
                         is initialized with a set of values.
                         From this, we provide a method called <strong>perform_operation</strong>, which is an abstract
                         method, whose functionality is defined by its subclasses.
-                        From the earlier discussed in Single Responsibility, the subclasses involve Addition,
-                        Subtraction, and Multiplication. The Addition class will perform the functionality for adding
-                        numbers,
-                        the subtraction class will perform the functionality for subtracting numbers, and lastly,
-                        multiplication will perform the functionality for d
-                        multiplying numbers. With this design approach of a common base class, we can easily extend this
+                        The Addition class will perform the functionality for adding
+                        numbers, the subtraction class will perform the functionality for subtracting numbers, and
+                        lastly, multiplication will perform the functionality for multiplying numbers. With this design
+                        approach of a common base class, we can easily extend this
                         to include other operations such as Division.
                     </dd>
                     <dt class="col-sm-3">Liskov Substitution</dt>
@@ -150,7 +170,7 @@
                         method.
                         This ensures each subclass is performing that operation that is intended to perform. The
                         subclass is not expected to implement/override
-                        any of the methods from its base class, if applicable.
+                        any of the other methods from its base class, if applicable.
                     </dd>
                     <dt class="col-sm-3">Dependency Inversion</dt>
                     <dd class="col-sm-9 p-2">
@@ -183,6 +203,31 @@
                  alt="...">
         </div>
     </div>
+
+    <div class="row">
+        <div class="col-8">
+            <p class="h3">Design Pattern</p>
+            <hr class="bg-danger border-2 border-top border-danger">
+            <figure class="figure">
+                <img src="static/images/CalculatorDesignPattern.png" class="figure-img img-fluid rounded"
+                     alt="">
+                <figcaption class="figure-caption">Factory Design Pattern for Calculator class.</figcaption>
+            </figure>
+            <div>
+                Design Patterns, as discussed in OOP Terminology section, is defined as a "general repeatable solution
+                to a commonly occurring
+                problem in software design" (https://sourcemaking.com/design_patterns). The design pattern that we will
+                be discussing is the factory design pattern, which
+                allows you to create any instance of a derived class. In the example, shown above, we can create a
+                Subtraction object in two ways.
+                The first way is to make a standard Python object, the second way is to use the <strong>create</strong>
+                method defined in the CalculatorOperation
+                class, which is a classmethod, and therefore passes an instance of the class, and then creates an object
+                that type.
+            </div>
+        </div>
+    </div>
+
 </div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->

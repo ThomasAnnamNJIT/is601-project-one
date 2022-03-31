@@ -12,6 +12,9 @@ class CalculatorOperation(ABC):
     def perform_operation(self) -> float:
         raise NotImplementedError("Not implemented")
 
+    @classmethod
+    def create(cls, tuple_list: tuple):
+        return cls(tuple_list)
+
     def get_values(self):
         return self.__values
-

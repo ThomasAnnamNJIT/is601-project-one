@@ -54,7 +54,15 @@
                 <li>Polymorphism</li>
                 <li>Abstraction</li>
             </ul>
-            The third and fourth section will an Overview of SOLID/Design Patterns.
+            The third section will discuss testing and other miscellaneous concepts, and cover the following
+            terminology:
+            <ul class="px-5">
+                <li>Fixture</li>
+                <li>Type hint</li>
+                <li>Type cast</li>
+                <li>Unit test</li>
+            </ul>
+            The fourth and fifth section will discuss an Overview of Design Patterns/Solid.
             </p>
         </div>
         <div class="col">
@@ -153,6 +161,70 @@
     </div>
     <div class="row">
         <div class="col-8">
+            <p class="h3">Testing</p>
+            <hr class="bg-danger border-2 border-top border-danger">
+            <div>
+                <dl>
+                    <dt class="col-sm-3">Fixture</dt>
+                    <img src="static/images/HttpClientFixture.png" class="rounded img-fluid"
+                         class="rounded m-2"
+                         alt="...">
+                    <dd class="col-sm-9 p-2">
+                        As discussed previously in the <strong>Python/Flask</strong> section, PyTest is a testing
+                        framework in
+                        Python that allows you to write unit tests.
+                        Fixture is defined as "define the steps and data that constitute the arrange phase of a test"
+                        (https://docs.pytest.org/en/7.1.x/explanation/fixtures.html). This is to the equivalent to the
+                        arrange phase
+                        within <strong>AAA Testing</strong>. In other words, a <em>fixture</em> serves a purpose within
+                        your tests altogether.
+                        One example of a fixture we've been using to test our content pages is via the http client as
+                        shown in the picture above. Using this fixture allows us to make our API calls in order to test
+                        our web pages
+                        such as the content page. By defining this fixture, we can use this anywhere in our unit tests
+                        by simply passing it as an argument for our unit tests.
+                    </dd>
+                    <dt class="col-sm-3 text-truncate">Type hint</dt>
+                    <img src="static/images/Addition.png" class="rounded img-fluid"
+                         class="rounded m-2"
+                         alt="...">
+                    <dd class="col-sm-9 p-2">
+                        Type hinting is defined as "...a formal solution to statically indicate the type of a value
+                        within your Python code"
+                        (https://realpython.com/lessons/type-hinting/). This is done typically with a methods arguments
+                        and it's return value.
+                        With type hinting, we can specify the type we're expecting (i.e int, str, List), default values
+                        for the parameters, and the return type.
+                        For example, in the above picture, we see that the expected return type associated with
+                        perform_operation
+                        is expected to be a float.
+                    </dd>
+                    <dt class="col-sm-3">Type Casting</dt>
+                    <dd class="col-sm-9 p-2">
+                        Type casting is defined as "...specify a type on to a variable". This is typically done with
+                        Python objects
+                        such as:
+                        <ul class="px-5">
+                            <li>int()</li>
+                            <li>str()</li>
+                            <li>float()</li>
+                        </ul>
+                        For example to convert the number one into a float, we can simply do float(1), which would yield
+                        the result of 1.0.
+                    </dd>
+                    <dt class="col-sm-3">Unit Test</dt>
+                    <dd class="col-sm-9 p-2">
+                        A unit test is a python function that tests a particular
+                        piece of code (i.e a method), which can be thought of as the subject under test. Typically, with
+                        unit testing, developers mock out any external dependencies such as database operations or 3rd
+                        party API calls.
+                    </dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-8">
             <p class="h3">Principles of OOP</p>
             <hr class="bg-danger border-2 border-top border-danger">
             <div>
@@ -233,8 +305,9 @@
                         associated with behavioral design patterns
                         include Observer and Chain of Responsibility. The <strong>Observer</strong> design pattern
                         notifies of changes to any number of classes,
-                        which is a highly effective when dealing with event driven architecture. The Chain of
-                        Responsibility deals with class delegation in terms of whether it wants to deal the request or
+                        which is a highly effective when dealing with event driven architecture. The <strong>Chain of
+                        Responsibility</strong> deals with class delegation in terms of whether it wants to deal the
+                        request or
                         not,
                         or pass it to off to another handler. To see an example of the Chain Responsibility, please
                         refer to this example shown

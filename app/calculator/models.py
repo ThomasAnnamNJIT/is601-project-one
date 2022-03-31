@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 from typing import List, Tuple
 
 
-class CalculatorOperation(ABC):
+class Calculator(ABC):
 
     def __init__(self, values: List[Tuple[int, int]]):
         """ constructor method"""

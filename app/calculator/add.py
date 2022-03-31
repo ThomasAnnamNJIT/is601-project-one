@@ -1,7 +1,7 @@
-from app.calculator.models import CalculatorOperation
+from app.calculator.models import Calculator
 
 
-class Addition(CalculatorOperation):
+class Addition(Calculator):
 
     def perform_operation(self) -> float:
         result = 0.0

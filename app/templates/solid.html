@@ -98,7 +98,7 @@
                         </blockquote>
                         This is demonstrated within our
                         Calculator example shown in the above figures, where we have three subclasses which all extend
-                        from CalculatorOperation
+                        from Calculator
                         (i.e. abstract base class),
                         which are Addition, Subtraction, and Multiplication. All these subclasses have only single
                         responsibility
@@ -123,7 +123,7 @@
                             </footer>
                         </blockquote>
                         In our Calculator example shown above, we provide an abstract base class called
-                        CalculatorOperation, which
+                        Calculator, which
                         is initialized with a set of values.
                         From this, we provide a method called <strong>perform_operation</strong>, which is an abstract
                         method, whose functionality is defined by its subclasses.
@@ -149,7 +149,7 @@
                         </blockquote>
                         In our Calculator example, we see that <strong>perform_operation</strong> is an abstract method,
                         which means that it <strong>must</strong> be implemented by all of it's subclasses.
-                        Therefore, if we had a single method that takes a CalculatorOperation has an argument, then any
+                        Therefore, if we had a single method that takes a Calculator has an argument, then any
                         of its subclasses (i.e. Addition, Subtraction, or Multiplication) should all work as expected
                         since it would call its implementation of the
                         <strong>perform_operation</strong> method. This is also known as method overriding.
@@ -221,7 +221,7 @@
                 allows you to create any instance of a derived class. In the example, shown above, we can create a
                 Subtraction object in two ways.
                 The first way is to make a standard Python object, the second way is to use the <strong>create</strong>
-                method defined in the CalculatorOperation
+                method defined in the Calculator
                 class, which is a classmethod, and therefore passes an instance of the class, and then creates an object
                 that type.
             </div>

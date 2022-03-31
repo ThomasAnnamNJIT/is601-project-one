@@ -1,7 +1,7 @@
-from app.calculator.models import CalculatorOperation
+from app.calculator.models import Calculator
 
 
-class Multiplication(CalculatorOperation):
+class Multiplication(Calculator):
 
     def perform_operation(self) -> float:
         result = 1.0
